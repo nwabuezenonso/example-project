@@ -3,34 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="/style.css" rel="stylesheet" />
     <title>Document</title>
   </head>
+
   <body>
-    <header class="header">
-      <!-- navigation bar -->
-      <div class="navbar-container">
-        <!-- Logo -->
-        <div class="logo">LOGO</div>
+    <h1 id="accountName"></h1>
+    <div id="balance"></div>
 
-        <!-- links -->
-        <div class="navlinks">
-          <a href="/">Design Tools</a>
-          <a href="/">Daily updates</a>
-          <a href="/">Tutorials</a>
-          <a href="/">Library</a>
-        </div>
+    <button onclick="deposit()">Deposit</button>
 
-        <button class="suscribe-button">Subscribe</button>
-      </div>
+    <button onclick="withdrawal()">Withdrawal</button>
 
-      <!-- Headline -->
-      <div class="headline-container">
-        <div>
-          <p>Hello</p>
-          <p>Insights about my personal and work life and the in-between</p>
-        </div>
-      </div>
-    </header>
+    <script>
+      let accountName = document.getElementById("accountName");
+      let balance = document.getElementById("balance");
+
+      accountName.innerText = "Mike Benjamin";
+
+      let currentBalance = 800;
+      balance.innerText = currentBalance;
+
+      let transactionAmount = 100;
+
+      // deposit
+      let recipientAccountName = "Sarah Benjamin";
+      let depositedAmount = 500;
+
+      function deposit() {
+        currentBalance = currentBalance + depositedAmount;
+        balance.innerText = currentBalance;
+      }
+
+      function withdrawal() {
+        currentBalance = currentBalance - transactionAmount;
+        if (currentBalance == 0) {
+          alert("Insufficient fund");
+        }
+
+        balance.innerText = currentBalance;
+      }
+    </script>
   </body>
 </html>
