@@ -4,10 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
     <h1 id="accountName"></h1>
+    <img src="profile.jpeg" alt="" class="profile">
     <div id="balance"></div>
 
     <button onclick="deposit()">Deposit</button>
@@ -18,7 +20,7 @@
       let accountName = document.getElementById("accountName");
       let balance = document.getElementById("balance");
 
-      accountName.innerText = "Mike Benjamin";
+      accountName.innerText = "Syntia Akabugo";
 
       let currentBalance = 800;
       balance.innerText = currentBalance;
