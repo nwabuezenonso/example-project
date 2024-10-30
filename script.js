@@ -1,1 +1,1 @@
-alert("Welcome to Kinplus MObile Banking")
+alert("Welcome to Kinplus MObile Banking");
